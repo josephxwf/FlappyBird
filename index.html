@@ -19,7 +19,7 @@ var myBackground;
 
 function startGame() {
     myGamePiece = new component(30, 30, "bird.png", 10, 120, "image");
-    myBackground = new component(1000, 470, "background.jpeg", 0, 0, "background");
+    myBackground = new component(1000, 450, "background.jpeg", 0, 0, "background");
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
@@ -29,7 +29,7 @@ var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 1000;
-        this.canvas.height = 470;
+        this.canvas.height = 450;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
