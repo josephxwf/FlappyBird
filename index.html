@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 <style>
 canvas {
     background-color:cornflowerblue;
@@ -11,25 +11,21 @@ canvas {
 <body>
 
 
-<canvas id="myCanvas" width="300" height="200"
+<canvas id="StartScreenCanvas" width="300" height="200"
 style=" border:1px solid #d3d3d3;">
 Your browser does not support the canvas element.
 </canvas>
 
-<canvas id="myCanvas2" width="300" height="200"
-style="display:none; border:1px solid #d3d3d3;">
-Your browser does not support the canvas element.
-</canvas>
 
 
 <script>
 
 
-var canvas = document.getElementById("myCanvas");
+var canvas = document.getElementById("StartScreenCanvas");
 canvas.setAttribute('width', 1000);
 canvas.setAttribute('height', 540);
 canvas.addEventListener("mousedown", function () {
-        var canvas = document.getElementById("myCanvas");
+        var canvas = document.getElementById("StartScreenCanvas");
         canvas.style.display = "none";
 
         startGame()
@@ -226,7 +222,7 @@ location.reload();
 </script>
 
 <br>
-<button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.05)">ACCELERATE</button>
+
 <button onmousedown="restart()" >RESTART</button>
 <p>Click the SCREEN to control the bird and RESTART button to start over.</p>
 <p>How long can you stay alive? Click the SCREEN to stay in the air...</p>
