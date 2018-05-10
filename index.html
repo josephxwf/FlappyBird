@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,19 +121,29 @@ function component(width, height, color, x, y, type) {
         this.gravitySpeed += this.gravity;
         this.x += this.speedX;
         this.y += this.speedY + this.gravitySpeed;
-        this.hitBottom();
+        this.hitBottomOrUp();
         if (this.type == "background") {
             if (this.x == -(this.width)) {
                 this.x = 0;
             }
         }
     }
-    this.hitBottom = function() {
+    this.hitBottomOrUp = function() {
         var rockbottom = myGameArea.canvas.height - this.height;
-        if (this.y > rockbottom) {
+        
+	    if (this.y > rockbottom) { //hit bottom
             this.y = rockbottom;
             this.gravitySpeed = 0;
         }
+	    
+	    if (this.y <0) { // hit up
+            this.y = 0;
+            this.gravitySpeed = 0;
+        }
+	    
+	    
+	    
+	    
     }
     this.crashWith = function(otherobj) {
         var myleft = this.x;
@@ -201,7 +210,7 @@ location.reload();
 <br>
 
 <button onmousedown="restart()" >RESTART</button>
-<p>Click the SCREEN to control the bird and RESTART button to start over.</p>
+<p>Click on the SCREEN to control the bird and RESTART button to start over.</p>
 <p>How long can you stay alive? Click the SCREEN to stay in the air...</p>
 
 </body>
