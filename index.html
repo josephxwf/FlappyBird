@@ -47,8 +47,10 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var myBackground;
+	
 function startGame() {
-    
+    var canvas = document.createElement("canvas");
+    canvas.id = "StartScreenCanvas";
     myGamePiece = new component(30, 30, "bird.png", 10, 120, "image");
     myBackground = new component(canvas.width, canvas.height, "background.jpeg", 0, 0, "background");
     myGamePiece.gravity = 0.05;
