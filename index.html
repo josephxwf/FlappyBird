@@ -12,7 +12,7 @@ canvas {
 <body>
 
 
-<canvas id="StartScreenCanvas" width="100vh" height="100vh"
+<canvas id="StartScreenCanvas" width="100%" height="100%"
 style=" border:1px solid #d3d3d3;">
 Your browser does not support the canvas element.
 </canvas>
@@ -21,8 +21,8 @@ Your browser does not support the canvas element.
 
 <script>
 var canvas = document.getElementById("StartScreenCanvas");
-canvas.setAttribute('width', "100vh" );
-canvas.setAttribute('height', "100vh" );
+canvas.setAttribute('width', "100%" );
+canvas.setAttribute('height', "100%" );
 canvas.addEventListener("mousedown", function () {
         var canvas = document.getElementById("StartScreenCanvas");
         canvas.style.display = "none";
