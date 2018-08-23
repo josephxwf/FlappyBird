@@ -33,7 +33,7 @@ canvas.addEventListener("mousedown", function () {
         startGame()
 }, false);
 var ctx=canvas.getContext("2d");
-ctx.font = '12px monospace';
+ctx.font = '24px monospace';
 var hue = 0;
 var color = 'rgb(' + hue + ',0,0)';
 ctx.fillStyle = color;
@@ -58,7 +58,7 @@ var canvas = document.getElementById("StartScreenCanvas");
 function startGame() {
     
     myGamePiece = new component(30, 30, "bird.png", 10, 120, "image");
-    myBackground = new component(1000, 540, "background.jpeg", 0, 0, "background");
+    myBackground = new component(canvas.width, canvas.height, "background.jpeg", 0, 0, "background");
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
