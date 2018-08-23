@@ -6,6 +6,9 @@
 <style>
 canvas {
     background-color:cornflowerblue;
+	width:100%;
+	height:540;
+	position: absolute;
 
 }
 
@@ -14,7 +17,7 @@ canvas {
 <body>
 
 
-<canvas id="StartScreenCanvas" width="300" height="200"
+<canvas id="StartScreenCanvas" 
 style=" border:1px solid #d3d3d3;">
 Your browser does not support the canvas element.
 </canvas>
@@ -23,9 +26,6 @@ Your browser does not support the canvas element.
 
 <script>
 var canvas = document.getElementById("StartScreenCanvas");
-canvas.setAttribute('width', 1000);
-canvas.setAttribute('height', 540);
-
 canvas.addEventListener("mousedown", function () {
         var canvas = document.getElementById("StartScreenCanvas");
         canvas.style.display = "none";
@@ -53,9 +53,10 @@ var myGamePiece;
 var myObstacles = [];
 var myScore;
 var myBackground;
+var canvas = document.getElementById("StartScreenCanvas");
 function startGame() {
     myGamePiece = new component(30, 30, "bird.png", 10, 120, "image");
-    myBackground = new component(1000, 540, "background.jpeg", 0, 0, "background");
+    myBackground = new component(canvas.width, canvas.height, "background.jpeg", 0, 0, "background");
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
