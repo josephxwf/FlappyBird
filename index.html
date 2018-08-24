@@ -8,7 +8,7 @@
         background-color:cornflowerblue;
 	position: absolute;
 	width: 100%;
-	height: auto;
+	height: 100%;
 	
 	
 
@@ -54,7 +54,7 @@ var myScore;
 var myBackground;
 function startGame() {
     myGamePiece = new component(30, 30, "bird.png", 10, 120, "image");
-    myBackground = new component(1000, 540, "background.jpeg", 0, 0, "background");
+    myBackground = new component(window.innerwidth, 540, "background.jpeg", 0, 0, "background");
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
@@ -70,7 +70,7 @@ var myGameArea = {
         
             accelerate(0.05);
 			}, false);
-        this.canvas.width = 1000;
+        this.canvas.width = window.innerwidth;
         this.canvas.height = 540;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
