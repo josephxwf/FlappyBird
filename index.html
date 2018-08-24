@@ -67,7 +67,11 @@ var myGameArea = {
         
             accelerate(0.05);
 			}, false);
-        
+        this.canvas.style.width ='100%';
+	this.canvas.style.height='540px';
+	this.canvas.width  = this.canvas.offsetWidth;
+        this.canvas.height = this.canvas.offsetHeight;
+	    
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
