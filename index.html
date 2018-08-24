@@ -68,7 +68,7 @@ var myGameArea = {
         
             accelerate(0.05);
 			}, false);
-        this.canvas.width = window.innerWidth;
+        this.canvas.width = canvas.width;
         this.canvas.height = 540;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
