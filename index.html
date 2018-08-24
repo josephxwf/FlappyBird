@@ -7,8 +7,7 @@
 canvas {
         background-color:cornflowerblue;
 	position:absolute;
-	width:100vh;
-        height:100vh;	
+	
 
 }
 
@@ -28,7 +27,9 @@ Your browser does not support the canvas element.
 		
 	
 var canvas = document.getElementById("StartScreenCanvas");
-
+canvas.style.width = "100vh";
+canvas.style.height = "90vh";
+	
 
 
 canvas.addEventListener("mousedown", function () {
