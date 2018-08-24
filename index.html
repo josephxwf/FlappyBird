@@ -4,7 +4,7 @@
 <head>
 <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
 <style>
-#StartScreenCanvas {
+#canvas {
         background-color:cornflowerblue;
 	position: absolute;
 	width:100%;
@@ -51,7 +51,7 @@ var myBackground;
 function startGame() {
    
     myGamePiece = new component(30, 30, "bird.png", 10, 120, "image");
-    myBackground = new component(100%, 540, "background.jpeg", 0, 0, "background");
+    myBackground = new component( "background.jpeg", 0, 0, "background");
     myGamePiece.gravity = 0.05;
     myScore = new component("30px", "Consolas", "black", 280, 40, "text");
     myGameArea.start();
@@ -67,8 +67,7 @@ var myGameArea = {
         
             accelerate(0.05);
 			}, false);
-        this.canvas.width = 100%;
-        this.canvas.height = 540;
+        
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.frameNo = 0;
