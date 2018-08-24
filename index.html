@@ -6,7 +6,9 @@
 <style>
 #StartScreenCanvas {
         background-color:cornflowerblue;
-	
+	position:absolute;
+	width:100%;
+        height:auto;
 	
 	
 	
@@ -30,8 +32,7 @@ Your browser does not support the canvas element.
 		
 	
 var canvas = document.getElementById("StartScreenCanvas");
-canvas.style.width = '100%';
-canvas.setAttribute('height', 540);
+
 
 
 canvas.addEventListener("mousedown", function () {
