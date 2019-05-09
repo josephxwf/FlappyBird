@@ -1,2 +1,2 @@
 # Flappy Bird (JavaScript)
-Play this game here: http://josephfxw.github.io/FlappyBird/
+Play this game here: http://josephxwf.github.io/FlappyBird/
